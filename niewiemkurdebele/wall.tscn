@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://c770eu1a76iam"]
+
+[ext_resource type="Texture2D" uid="uid://cnjuf50kdrs17" path="res://icon.svg" id="1_nwp46"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_oh6kn"]
+b = Vector2(0, 649)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rim2r"]
+size = Vector2(104, 657)
+
+[node name="Wall" type="StaticBody2D"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="Wall_Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_oh6kn")
+
+[node name="Icon" type="Sprite2D" parent="Wall_Collision"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0, 321)
+scale = Vector2(-0.0488728, -5.1084)
+texture = ExtResource("1_nwp46")
+
+[node name="Grab_Area" type="Area2D" parent="." groups=["SafeWall"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grab_Area"]
+position = Vector2(-1, 318.5)
+scale = Vector2(0.52, 1)
+shape = SubResource("RectangleShape2D_rim2r")
+debug_color = Color(0.501961, 0.411765, 0.219608, 0.419608)

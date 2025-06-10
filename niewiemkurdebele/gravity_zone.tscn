@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://jh7hd7khf450"]
+
+[ext_resource type="Script" path="res://gravity_zone.gd" id="1_x033p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mwol2"]
+size = Vector2(1174, 651)
+
+[node name="GravityZone" type="Area2D" groups=["GravityZone"]]
+position = Vector2(3815, 309)
+gravity_space_override = 3
+linear_damp_space_override = 3
+angular_damp_space_override = 3
+script = ExtResource("1_x033p")
+
+[node name="GravityZoneCollision" type="CollisionShape2D" parent="."]
+position = Vector2(-14, -1.5)
+shape = SubResource("RectangleShape2D_mwol2")
+
+[connection signal="tree_exited" from="." to="." method="_on_tree_exited"]

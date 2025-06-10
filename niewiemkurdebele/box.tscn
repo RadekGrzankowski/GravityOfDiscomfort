@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjr0ycavt6dlm"]
+
+[ext_resource type="Texture2D" uid="uid://cnjuf50kdrs17" path="res://icon.svg" id="1_1fbnt"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2o0na"]
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s14od"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ems4l"]
+size = Vector2(53, 53)
+
+[node name="Box" type="RigidBody2D"]
+mass = 0.01
+physics_material_override = SubResource("PhysicsMaterial_2o0na")
+gravity_scale = 0.0
+
+[node name="BoxCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_s14od")
+
+[node name="BoxIcon" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_1fbnt")
+
+[node name="ItemArea" type="Area2D" parent="." groups=["Item"]]
+
+[node name="ItemCollision" type="CollisionShape2D" parent="ItemArea"]
+shape = SubResource("RectangleShape2D_ems4l")

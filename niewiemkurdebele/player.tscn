@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://o6tk0ohnlhnh"]
+
+[ext_resource type="Texture2D" uid="uid://cnjuf50kdrs17" path="res://icon.svg" id="1_4flbx"]
+[ext_resource type="Script" path="res://player.gd" id="1_lobu1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sh265"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v3wo5"]
+radius = 58.0086
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_lobu1")
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_4flbx")
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2.0155)
+shape = SubResource("RectangleShape2D_sh265")
+
+[node name="PlayerGrabArea" type="Area2D" parent="."]
+
+[node name="PlayerGrabCollision" type="CollisionShape2D" parent="PlayerGrabArea"]
+shape = SubResource("CircleShape2D_v3wo5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="area_entered" from="PlayerGrabArea" to="." method="_on_player_grab_area_area_entered"]
+[connection signal="area_exited" from="PlayerGrabArea" to="." method="_on_player_grab_area_area_exited"]
