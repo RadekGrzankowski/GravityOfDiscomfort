@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dxv1jtcfqhnn"]
 
-[ext_resource type="PackedScene" uid="uid://c770eu1a76iam" path="res://wall.tscn" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://o6tk0ohnlhnh" path="res://player.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bh6f006kjkel1" path="res://level_layout.tscn" id="2_8c8mv"]
 [ext_resource type="PackedScene" uid="uid://tmk5q36mw5xf" path="res://exit.tscn" id="3_vengv"]
 [ext_resource type="PackedScene" uid="uid://cjr0ycavt6dlm" path="res://box.tscn" id="4_8ylr7"]
 [ext_resource type="PackedScene" uid="uid://jh7hd7khf450" path="res://gravity_zone.tscn" id="5_003eh"]
@@ -11,97 +11,9 @@
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_1bvp3")]
-position = Vector2(3088, 368)
+position = Vector2(24, 175)
 
-[node name="Wall" parent="." instance=ExtResource("1_h2yge")]
-
-[node name="Wall6" parent="." instance=ExtResource("1_h2yge")]
-position = Vector2(1152, 633)
-rotation = -1.5708
-
-[node name="Wall9" parent="." instance=ExtResource("1_h2yge")]
-position = Vector2(1930, 634)
-rotation = -1.5708
-
-[node name="Wall12" parent="." instance=ExtResource("1_h2yge")]
-position = Vector2(2572, 217)
-rotation = -1.5708
-
-[node name="Wall13" parent="." instance=ExtResource("1_h2yge")]
-position = Vector2(2573, 345)
-rotation = -1.5708
-
-[node name="Wall10" parent="." instance=ExtResource("1_h2yge")]
-position = Vector2(2573, 635)
-rotation = 3.14159
-scale = Vector2(1, 0.45)
-
-[node name="Wall11" parent="." instance=ExtResource("1_h2yge")]
-position = Vector2(2574, 217)
-rotation = 3.14159
-scale = Vector2(1, 0.4)
-
-[node name="Wall7" parent="." instance=ExtResource("1_h2yge")]
-position = Vector2(1800, 991)
-rotation = 3.14159
-
-[node name="Wall8" parent="." instance=ExtResource("1_h2yge")]
-position = Vector2(1292, 0)
-rotation = -1.5708
-scale = Vector2(1, 2.01355)
-
-[node name="Wall19" parent="." instance=ExtResource("1_h2yge")]
-position = Vector2(1801, 990)
-rotation = -1.5708
-scale = Vector2(1, 2.01355)
-
-[node name="Wall20" parent="." instance=ExtResource("1_h2yge")]
-position = Vector2(3095, 1001)
-rotation = 3.14159
-scale = Vector2(1, 0.573545)
-
-[node name="Wall21" parent="." instance=ExtResource("1_h2yge")]
-position = Vector2(3095, 633)
-rotation = 1.57193
-scale = Vector2(1, 0.613545)
-
-[node name="Wall2" parent="." instance=ExtResource("1_h2yge")]
-position = Vector2(1151, -19)
-scale = Vector2(1, 0.44)
-
-[node name="Wall5" parent="." instance=ExtResource("1_h2yge")]
-position = Vector2(1151, 351)
-scale = Vector2(1, 0.44)
-
-[node name="Wall3" parent="." instance=ExtResource("1_h2yge")]
-rotation = -1.5708
-scale = Vector2(1, 2)
-
-[node name="Wall4" parent="." instance=ExtResource("1_h2yge")]
-position = Vector2(1175, 633)
-rotation = 1.5708
-scale = Vector2(1, 2)
-
-[node name="Wall14" parent="." instance=ExtResource("1_h2yge")]
-position = Vector2(4383, -13)
-
-[node name="Wall15" parent="." instance=ExtResource("1_h2yge")]
-position = Vector2(3218, -68)
-scale = Vector2(1, 0.44)
-
-[node name="Wall16" parent="." instance=ExtResource("1_h2yge")]
-position = Vector2(3218, 344)
-scale = Vector2(1, 0.52)
-
-[node name="Wall17" parent="." instance=ExtResource("1_h2yge")]
-position = Vector2(3215, -14)
-rotation = -1.5708
-scale = Vector2(1, 2)
-
-[node name="Wall18" parent="." instance=ExtResource("1_h2yge")]
-position = Vector2(4390, 633)
-rotation = 1.5708
-scale = Vector2(1, 2)
+[node name="LevelLayout" parent="." instance=ExtResource("2_8c8mv")]
 
 [node name="Exit" parent="." instance=ExtResource("3_vengv")]
 position = Vector2(1115, 308)
@@ -127,7 +39,7 @@ position = Vector2(2637, 669)
 rotation = -1.57632
 
 [node name="Box" parent="." instance=ExtResource("4_8ylr7")]
-position = Vector2(3119, 399)
+position = Vector2(145, 272)
 
 [node name="Label" type="Label" parent="."]
 offset_left = 4114.0

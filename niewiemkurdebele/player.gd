@@ -15,6 +15,7 @@ var grabbed_the_wall : bool = false
 @export var hit_force : float = 50.0
 var grawitacja_on : bool = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var walls_grabbed : int = 0
 
 func _ready():
 	pass
@@ -28,8 +29,6 @@ func add_jump_force(amount):
 func grab_item(item):
 	item.freeze = true
 	item.freeze = false
-	item.collision_mask = 2
-	item.collision_layer = 2
 	item.global_position = global_position + get_local_mouse_position().normalized()*50
 
 #release with force if mouse is outside, release calm if mouse is close
@@ -37,7 +36,7 @@ func release_item(item):
 	if get_local_mouse_position() > Vector2(50,50) or get_local_mouse_position() < Vector2(-50,-50):
 		item.apply_force(get_local_mouse_position().normalized()*100)
 	else:
-		item.apply_force(get_local_mouse_position().normalized()*0.1)
+		item.apply_force(get_local_mouse_position().normalized()*0.5)
 	
 
 func _physics_process(delta):
@@ -106,9 +105,11 @@ func _physics_process(delta):
 
 #check what entered the mouth
 func _on_player_grab_area_area_entered(area):
-	if area.is_in_group("SafeWall") and can_grab_wall == false:
-		can_grab_wall = true
-		print("touched a wall")
+	if area.is_in_group("SafeWall"):
+		walls_grabbed = walls_grabbed + 1
+		if walls_grabbed >= 1:
+			can_grab_wall = true
+			print("touched a wall")
 	if area.is_in_group("Item"):
 		can_grab_item = true
 		item_to_grab = area.get_parent()
@@ -123,9 +124,11 @@ func _on_player_grab_area_area_entered(area):
 
 #check what exited the mouth
 func _on_player_grab_area_area_exited(area):
-	if area.is_in_group("SafeWall") and can_grab_wall == true:
-		can_grab_wall = false
-		grabbed_the_wall = false
+	if area.is_in_group("SafeWall"):
+		walls_grabbed = walls_grabbed - 1
+		if walls_grabbed == 0:
+			can_grab_wall = false
+			grabbed_the_wall = false
 	if area.is_in_group("Item"):
 		can_grab_item = false
 	if area.is_in_group("Exit"):

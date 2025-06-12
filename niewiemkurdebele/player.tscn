@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://cnjuf50kdrs17" path="res://icon.svg" id="1_4flbx"]
 [ext_resource type="Script" path="res://player.gd" id="1_lobu1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sh265"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7axup"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v3wo5"]
-radius = 58.0086
+radius = 33.0
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
@@ -18,7 +18,7 @@ texture = ExtResource("1_4flbx")
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
 scale = Vector2(2, 2.0155)
-shape = SubResource("RectangleShape2D_sh265")
+shape = SubResource("RectangleShape2D_7axup")
 
 [node name="PlayerGrabArea" type="Area2D" parent="."]
 

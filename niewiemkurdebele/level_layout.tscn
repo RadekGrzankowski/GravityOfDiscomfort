@@ -1,0 +1,96 @@
+[gd_scene load_steps=2 format=3 uid="uid://bh6f006kjkel1"]
+
+[ext_resource type="PackedScene" uid="uid://c770eu1a76iam" path="res://wall.tscn" id="1_tpm1p"]
+
+[node name="LevelLayout" type="Node2D"]
+position = Vector2(1152, 633)
+rotation = -1.5708
+
+[node name="Wall6" parent="." instance=ExtResource("1_tpm1p")]
+
+[node name="Wall9" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(-1.00281, 778)
+
+[node name="Wall12" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(415.995, 1420)
+
+[node name="Wall13" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(287.995, 1421)
+
+[node name="Wall10" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(-2.00519, 1421)
+rotation = -1.5708
+scale = Vector2(1, 0.45)
+
+[node name="Wall11" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(415.995, 1422)
+rotation = -1.5708
+scale = Vector2(1, 0.4)
+
+[node name="Wall7" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(-358.002, 647.999)
+rotation = -1.5708
+
+[node name="Wall8" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(632.999, 140.002)
+scale = Vector2(1, 2.01355)
+
+[node name="Wall19" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(-357.002, 648.999)
+scale = Vector2(1, 2.01355)
+
+[node name="Wall20" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(-368.007, 1943)
+rotation = -1.5708
+scale = Vector2(1, 0.573545)
+
+[node name="Wall21" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(-0.00708008, 1943)
+rotation = -3.14046
+scale = Vector2(1, 0.613545)
+
+[node name="Wall2" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(652, -0.997559)
+rotation = 1.5708
+scale = Vector2(1, 0.44)
+
+[node name="Wall5" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(282, -0.998901)
+rotation = 1.5708
+scale = Vector2(1, 0.44)
+
+[node name="Wall3" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(633.004, -1152)
+scale = Vector2(1, 2)
+
+[node name="Wall4" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(-0.00012207, 23)
+rotation = -3.14159
+scale = Vector2(1, 2)
+
+[node name="Wall14" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(645.988, 3231)
+rotation = 1.5708
+
+[node name="Wall15" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(700.992, 2066)
+rotation = 1.5708
+scale = Vector2(1, 0.44)
+
+[node name="Wall16" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(288.992, 2066)
+rotation = 1.5708
+scale = Vector2(1, 0.52)
+
+[node name="Wall17" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(646.992, 2063)
+scale = Vector2(1, 2)
+
+[node name="Wall18" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(-0.0117188, 3238)
+rotation = -3.14159
+scale = Vector2(1, 2)
+
+[node name="Wall" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(633.004, -1152)
+rotation = 1.5708
