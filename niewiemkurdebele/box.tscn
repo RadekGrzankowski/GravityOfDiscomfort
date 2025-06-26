@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjr0ycavt6dlm"]
+[gd_scene load_steps=6 format=3 uid="uid://cjr0ycavt6dlm"]
 
 [ext_resource type="Texture2D" uid="uid://cnjuf50kdrs17" path="res://icon.svg" id="1_1fbnt"]
+[ext_resource type="Script" path="res://box.gd" id="1_lp2av"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2o0na"]
-bounce = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s14od"]
 
@@ -14,6 +14,7 @@ size = Vector2(53, 53)
 mass = 0.01
 physics_material_override = SubResource("PhysicsMaterial_2o0na")
 gravity_scale = 0.0
+script = ExtResource("1_lp2av")
 
 [node name="BoxCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_s14od")
@@ -27,3 +28,5 @@ texture = ExtResource("1_1fbnt")
 
 [node name="ItemCollision" type="CollisionShape2D" parent="ItemArea"]
 shape = SubResource("RectangleShape2D_ems4l")
+
+[connection signal="area_entered" from="ItemArea" to="." method="_on_item_area_area_entered"]
