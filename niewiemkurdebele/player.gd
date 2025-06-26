@@ -17,6 +17,12 @@ var grawitacja_on : bool = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var walls_grabbed : int = 0
 
+
+@export var max_oxygen : float = 100.0
+@onready var current_oxygen : float = max_oxygen
+@export var oxygen_UI : Label
+
+
 func _ready():
 	pass
 
@@ -37,9 +43,13 @@ func release_item(item):
 		item.apply_force(get_local_mouse_position().normalized()*100)
 	else:
 		item.apply_force(get_local_mouse_position().normalized()*0.5)
-	
-
+		
 func _physics_process(delta):
+	oxygen_UI.text = str("Oxygen Level: ", current_oxygen)
+	if current_oxygen <= 0:
+		get_tree().reload_current_scene()
+
+func _process(delta):
 	if grawitacja_on == true:
 		if not is_on_floor():
 			velocity.y += gravity * delta
@@ -121,6 +131,8 @@ func _on_player_grab_area_area_entered(area):
 		print("touched grass")
 	if area.is_in_group("GravityZone"):
 		grawitacja_on = true
+	if area.is_in_group("OxygenBoost"):
+		current_oxygen = max_oxygen
 
 #check what exited the mouth
 func _on_player_grab_area_area_exited(area):
@@ -133,3 +145,7 @@ func _on_player_grab_area_area_exited(area):
 		can_grab_item = false
 	if area.is_in_group("Exit"):
 		can_interact_with_exit = false
+
+
+func _on_oxygen_tick_timer_timeout():
+	current_oxygen = current_oxygen - 1.0

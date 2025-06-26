@@ -1,17 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://dxv1jtcfqhnn"]
+[gd_scene load_steps=8 format=3 uid="uid://dxv1jtcfqhnn"]
 
 [ext_resource type="PackedScene" uid="uid://o6tk0ohnlhnh" path="res://player.tscn" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bh6f006kjkel1" path="res://level_layout.tscn" id="2_8c8mv"]
 [ext_resource type="PackedScene" uid="uid://tmk5q36mw5xf" path="res://exit.tscn" id="3_vengv"]
 [ext_resource type="PackedScene" uid="uid://cjr0ycavt6dlm" path="res://box.tscn" id="4_8ylr7"]
 [ext_resource type="PackedScene" uid="uid://jh7hd7khf450" path="res://gravity_zone.tscn" id="5_003eh"]
+[ext_resource type="PackedScene" uid="uid://dpl5hp2jm5gu8" path="res://oxygen_tank.tscn" id="6_8shyy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_y84ai"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_1bvp3")]
-position = Vector2(24, 175)
+position = Vector2(37, 177)
 
 [node name="LevelLayout" parent="." instance=ExtResource("2_8c8mv")]
 
@@ -49,18 +50,46 @@ offset_bottom = 280.0
 text = "YOU WIN"
 
 [node name="Label5" type="Label" parent="."]
-offset_left = 114.0
-offset_top = 163.0
-offset_right = 185.0
-offset_bottom = 186.0
+offset_left = 3512.0
+offset_top = 603.0
+offset_right = 3649.0
+offset_bottom = 626.0
 text = "Press R to Restart"
 
+[node name="Label6" type="Label" parent="."]
+offset_left = 13.0
+offset_top = 61.0
+offset_right = 163.0
+offset_bottom = 84.0
+text = "Press E to grab wall"
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 177.0
+offset_top = 212.0
+offset_right = 327.0
+offset_bottom = 235.0
+text = "Press E to grab item"
+
+[node name="Label9" type="Label" parent="."]
+offset_left = 1034.0
+offset_top = 576.0
+offset_right = 1188.0
+offset_bottom = 599.0
+text = "Oxygen"
+
+[node name="Label8" type="Label" parent="."]
+offset_left = 15.0
+offset_top = 84.0
+offset_right = 259.0
+offset_bottom = 107.0
+text = "Hold and release Space to jump"
+
 [node name="Label2" type="Label" parent="."]
-offset_left = 2827.0
-offset_top = 465.0
-offset_right = 2867.0
-offset_bottom = 488.0
-text = "FIX THIS AREA"
+offset_left = 3043.0
+offset_top = 453.0
+offset_right = 3218.0
+offset_bottom = 476.0
+text = "FIX THE GRAVITY FIELD"
 
 [node name="Label3" type="Label" parent="."]
 offset_left = 2731.0
@@ -80,3 +109,12 @@ label_settings = SubResource("LabelSettings_y84ai")
 
 [node name="GravityZone" parent="." instance=ExtResource("5_003eh")]
 position = Vector2(3920, 313)
+
+[node name="OxygenTank" parent="." instance=ExtResource("6_8shyy")]
+position = Vector2(1132, 601)
+
+[node name="OxygenTank2" parent="." instance=ExtResource("6_8shyy")]
+position = Vector2(1752, 599)
+
+[node name="OxygenTank3" parent="." instance=ExtResource("6_8shyy")]
+position = Vector2(3202, 603)

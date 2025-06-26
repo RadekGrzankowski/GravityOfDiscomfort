@@ -8,9 +8,11 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_v3wo5"]
 radius = 33.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("oxygen_UI") groups=["Player"]]
 motion_mode = 1
 script = ExtResource("1_lobu1")
+hit_force = 100.0
+oxygen_UI = NodePath("OxygenUI")
 
 [node name="Icon" type="Sprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
@@ -27,5 +29,17 @@ shape = SubResource("CircleShape2D_v3wo5")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+[node name="OxygenUI" type="Label" parent="."]
+offset_left = -565.0
+offset_top = 292.0
+offset_right = -457.0
+offset_bottom = 315.0
+text = "Ogygen level: "
+
+[node name="OxygenTickTimer" type="Timer" parent="."]
+process_callback = 0
+autostart = true
+
 [connection signal="area_entered" from="PlayerGrabArea" to="." method="_on_player_grab_area_area_entered"]
 [connection signal="area_exited" from="PlayerGrabArea" to="." method="_on_player_grab_area_area_exited"]
+[connection signal="timeout" from="OxygenTickTimer" to="." method="_on_oxygen_tick_timer_timeout"]

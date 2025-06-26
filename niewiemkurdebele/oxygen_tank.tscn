@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpl5hp2jm5gu8"]
+
+[ext_resource type="Script" path="res://oxygen_tank.gd" id="1_3ec5f"]
+[ext_resource type="Texture2D" uid="uid://cnjuf50kdrs17" path="res://icon.svg" id="1_ax5s3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hgih0"]
+size = Vector2(20, 50)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yigy5"]
+blend_mode = 1
+
+[node name="OxygenTank" type="Area2D" groups=["OxygenBoost"]]
+script = ExtResource("1_3ec5f")
+
+[node name="OxygenTankCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hgih0")
+
+[node name="OxygenIcon" type="Sprite2D" parent="."]
+modulate = Color(0, 0.67451, 0.713726, 1)
+self_modulate = Color(0.427451, 0.972549, 1, 1)
+material = SubResource("CanvasItemMaterial_yigy5")
+scale = Vector2(-0.11855, 0.33221)
+texture = ExtResource("1_ax5s3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
