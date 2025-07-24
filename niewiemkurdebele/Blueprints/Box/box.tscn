@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cjr0ycavt6dlm"]
 
 [ext_resource type="Texture2D" uid="uid://cnjuf50kdrs17" path="res://icon.svg" id="1_1fbnt"]
-[ext_resource type="Script" path="res://box.gd" id="1_lp2av"]
+[ext_resource type="Script" path="res://Blueprints/Box/box.gd" id="1_lp2av"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2o0na"]
 

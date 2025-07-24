@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bh6f006kjkel1"]
+[gd_scene load_steps=3 format=3 uid="uid://bh6f006kjkel1"]
 
-[ext_resource type="PackedScene" uid="uid://c770eu1a76iam" path="res://wall.tscn" id="1_tpm1p"]
+[ext_resource type="PackedScene" uid="uid://c770eu1a76iam" path="res://Blueprints/Level Layout/Walls/wall.tscn" id="1_tpm1p"]
+[ext_resource type="PackedScene" uid="uid://tmk5q36mw5xf" path="res://Blueprints/Exit/exit.tscn" id="2_yug1t"]
 
 [node name="LevelLayout" type="Node2D"]
 position = Vector2(1152, 633)
@@ -69,8 +70,14 @@ rotation = -3.14159
 scale = Vector2(1, 2)
 
 [node name="Wall14" parent="." instance=ExtResource("1_tpm1p")]
-position = Vector2(645.988, 3231)
+position = Vector2(638.988, 3238)
 rotation = 1.5708
+scale = Vector2(1, 0.361282)
+
+[node name="Wall22" parent="." instance=ExtResource("1_tpm1p")]
+position = Vector2(243.988, 3236)
+rotation = 1.5708
+scale = Vector2(-0.966717, 0.378636)
 
 [node name="Wall15" parent="." instance=ExtResource("1_tpm1p")]
 position = Vector2(700.992, 2066)
@@ -94,3 +101,7 @@ scale = Vector2(1, 2)
 [node name="Wall" parent="." instance=ExtResource("1_tpm1p")]
 position = Vector2(633.004, -1152)
 rotation = 1.5708
+
+[node name="Exit" parent="." instance=ExtResource("2_yug1t")]
+position = Vector2(325.988, 3202)
+rotation = 1.57366

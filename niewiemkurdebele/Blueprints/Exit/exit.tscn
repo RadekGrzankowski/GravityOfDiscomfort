@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://tmk5q36mw5xf"]
 
-[ext_resource type="Script" path="res://exit.gd" id="1_j4v6l"]
+[ext_resource type="Script" path="res://Blueprints/Exit/exit.gd" id="1_j4v6l"]
 [ext_resource type="Texture2D" uid="uid://cnjuf50kdrs17" path="res://icon.svg" id="1_kc0hs"]
-[ext_resource type="PackedScene" uid="uid://c770eu1a76iam" path="res://wall.tscn" id="3_l884p"]
+[ext_resource type="PackedScene" uid="uid://c770eu1a76iam" path="res://Blueprints/Level Layout/Walls/wall.tscn" id="3_l884p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6iimd"]
 size = Vector2(70, 73)

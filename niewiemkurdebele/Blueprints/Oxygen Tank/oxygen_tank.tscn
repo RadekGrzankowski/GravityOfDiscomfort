@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dpl5hp2jm5gu8"]
 
-[ext_resource type="Script" path="res://oxygen_tank.gd" id="1_3ec5f"]
+[ext_resource type="Script" path="res://Blueprints/Oxygen Tank/oxygen_tank.gd" id="1_3ec5f"]
 [ext_resource type="Texture2D" uid="uid://cnjuf50kdrs17" path="res://icon.svg" id="1_ax5s3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgih0"]

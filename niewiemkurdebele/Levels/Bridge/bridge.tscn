@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd7ogoug2l1uw"]
+
+[ext_resource type="PackedScene" uid="uid://c770eu1a76iam" path="res://Blueprints/Level Layout/Walls/wall.tscn" id="1_njh0l"]
+[ext_resource type="PackedScene" uid="uid://dmil7mqbnjn7m" path="res://Blueprints/Level Layout/Walls/wall_round.tscn" id="2_ueg0b"]
+[ext_resource type="PackedScene" uid="uid://tmk5q36mw5xf" path="res://Blueprints/Exit/exit.tscn" id="4_sn3f3"]
+
+[node name="Bridge" type="Node2D"]
+rotation = -1.5708
+
+[node name="Wall_Round" parent="." instance=ExtResource("2_ueg0b")]
+position = Vector2(-744, -960)
+rotation = -1.57079
+scale = Vector2(2.84593, 4.01194)
+metadata/_edit_group_ = true
+
+[node name="Wall_Round3" parent="." instance=ExtResource("2_ueg0b")]
+position = Vector2(8, -1536)
+scale = Vector2(2.53065, 2.08083)
+metadata/_edit_group_ = true
+
+[node name="Wall_Round2" parent="." instance=ExtResource("2_ueg0b")]
+position = Vector2(1856, -768)
+rotation = -4.71238
+scale = Vector2(2.84593, 4.01194)
+metadata/_edit_group_ = true
+
+[node name="Wall" parent="." instance=ExtResource("1_njh0l")]
+position = Vector2(-368, -856)
+rotation = -1.57079
+metadata/_edit_group_ = true
+
+[node name="Wall2" parent="." instance=ExtResource("1_njh0l")]
+position = Vector2(152, -856)
+rotation = -1.57079
+metadata/_edit_group_ = true
+
+[node name="Exit2" parent="." instance=ExtResource("4_sn3f3")]
+position = Vector2(1823, -862)
+rotation = 6.27921
+scale = Vector2(1, 1.2)

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmil7mqbnjn7m"]
+
+[ext_resource type="PackedScene" uid="uid://ye2r53uusuu" path="res://Blueprints/Level Layout/Shapes/line_2d.tscn" id="2_0p14v"]
+
+[node name="Wall_Round" type="StaticBody2D"]
+
+[node name="Grab_Area" type="Area2D" parent="." groups=["SafeWall"]]
+
+[node name="GrabAreaCollision" type="CollisionPolygon2D" parent="Grab_Area"]
+build_mode = 1
+polygon = PackedVector2Array(1, -11, 179, 5, 328, 53, 435, 164, 462, 319, 427, 471, 327, 588, 179, 645, 0, 660, 0, 635, 175, 618, 312, 563, 405, 457, 436, 320, 412, 174, 313, 76, 173, 28, -1, 11)
+
+[node name="Line2D" parent="." instance=ExtResource("2_0p14v")]
+
+[node name="PhysicsCollision" type="CollisionPolygon2D" parent="."]
+build_mode = 1
+polygon = PackedVector2Array(1, -5, 176, 11, 323, 60, 429, 166, 452, 320, 421, 467, 323, 580, 178, 637, 0, 653, 0, 643, 177, 627, 318, 571, 412, 461, 443, 320, 420, 170, 319, 68, 174, 20, 0, 4)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://jh7hd7khf450"]
 
-[ext_resource type="Script" path="res://gravity_zone.gd" id="1_x033p"]
+[ext_resource type="Script" path="res://Blueprints/Gravity Zone/gravity_zone.gd" id="1_x033p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mwol2"]
 size = Vector2(1174, 651)

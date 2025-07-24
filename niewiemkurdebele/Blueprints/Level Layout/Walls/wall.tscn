@@ -6,7 +6,7 @@
 b = Vector2(0, 649)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rim2r"]
-size = Vector2(104, 657)
+size = Vector2(61.5385, 655)
 
 [node name="Wall" type="StaticBody2D"]
 
@@ -22,7 +22,7 @@ texture = ExtResource("1_nwp46")
 [node name="Grab_Area" type="Area2D" parent="." groups=["SafeWall"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Grab_Area"]
-position = Vector2(-1, 318.5)
+position = Vector2(0, 319.5)
 scale = Vector2(0.52, 1)
 shape = SubResource("RectangleShape2D_rim2r")
 debug_color = Color(0.501961, 0.411765, 0.219608, 0.419608)
