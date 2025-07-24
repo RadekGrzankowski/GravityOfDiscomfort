@@ -13,7 +13,7 @@
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_fhqpf")]
-position = Vector2(3104, 520)
+position = Vector2(16, 152)
 
 [node name="LevelLayout" parent="." instance=ExtResource("2_ijmpk")]
 
@@ -41,7 +41,7 @@ position = Vector2(2637, 669)
 rotation = -1.57632
 
 [node name="Box" parent="." instance=ExtResource("4_4otp8")]
-position = Vector2(3080, 400)
+position = Vector2(248, 264)
 
 [node name="Label" type="Label" parent="."]
 offset_left = 4114.0
